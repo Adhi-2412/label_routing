@@ -1,0 +1,24 @@
+:root{--bg:#eef1f4;--panel:#fff;--ink:#16212b;--mute:#5d6b78;--line:#d5dce3;--accent:#0b6e8a;--ok:#1f7a4d;--warn:#b4590a}
+@media (prefers-color-scheme:dark){:root{--bg:#10171d;--panel:#18222b;--ink:#e6edf3;--mute:#93a1ad;--line:#2a3743;--accent:#4cb8d6;--ok:#4cc38a;--warn:#f0a050}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "IBM Plex Sans",system-ui,sans-serif}
+header{display:flex;gap:24px;align-items:center;padding:14px 28px;background:var(--panel);border-bottom:1px solid var(--line);flex-wrap:wrap}
+h1{font:700 22px "Bricolage Grotesque",sans-serif;margin:0 12px 0 0}
+nav button{background:none;border:0;color:var(--mute);font:500 15px inherit;padding:8px 12px;cursor:pointer;border-bottom:2px solid transparent}
+nav button.on{color:var(--ink);border-color:var(--accent)}
+nav button:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+main{max-width:1000px;margin:24px auto;padding:0 20px}
+h2{font:700 20px "Bricolage Grotesque",sans-serif;margin:0 0 14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:18px;margin-bottom:18px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+.stat b{display:block;font:700 30px "Bricolage Grotesque",sans-serif}.stat span{color:var(--mute)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--mute);font-weight:500}
+button.pri{background:var(--accent);color:#fff;border:0;border-radius:4px;padding:9px 16px;font:500 14px inherit;cursor:pointer}
+input[type=text],input[type=file]{padding:8px;border:1px solid var(--line);border-radius:4px;background:var(--bg);color:var(--ink);font:inherit}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.tag{padding:2px 8px;border-radius:10px;font-size:12px;border:1px solid currentColor}
+.auto_routed,.resolved{color:var(--ok)}.review{color:var(--warn)}
+pre{white-space:pre-wrap;background:var(--bg);padding:10px;border-radius:4px;max-height:160px;overflow:auto;font-size:13px}
+.bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;min-width:80px}.bar i{display:block;height:100%;background:var(--accent)}
+.err{color:var(--warn)}.muted{color:var(--mute)}.scroll{overflow-x:auto}
